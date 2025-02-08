@@ -1,0 +1,92 @@
+<!--网站输入效果开始-->
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/input-with-fire.js"></script>
+<!--鼠标特效开始-->
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+   $("body").click(function(e) {
+       var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤");
+       var $i = $("<span/>").text(a[a_idx]);
+       a_idx = (a_idx + 1) % a.length;
+       var x = e.pageX,
+       y = e.pageY;
+       $i.css({
+           "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+           "top": y - 20,
+           "left": x,
+           "position": "absolute",
+           "font-weight": "bold",
+           "color": "#ff6651"
+       });
+       $("body").append($i);
+       $i.animate({
+           "top": y - 180,
+           "opacity": 0
+       },
+       1500,
+       function() {
+           $i.remove();
+       });
+   });
+});
+</script>
+<!--鼠标特效结束-->
+<!--全页特效开始-->
+<script src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/mobile-detect.js"></script>
+<script type="text/javascript">
+    // 设备检测
+    var md = new MobileDetect(window.navigator.userAgent);
+ 
+    // PC生效，手机/平板不生效
+    // md.mobile(); md.phone(); 
+    if(!md.phone()){
+        if(!md.tablet()){
+
+            // 雪花
+            $.getScript("https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/xiaxue.js");
+ 
+            // 樱花
+            // $.getScript("https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/yinghua.js");
+ 
+            // 小烟花特效
+            // $.getScript("https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/mouse-click.js");
+ 
+            // 大烟花特效
+            $.getScript("https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/mouse/mouse-click-02/mouse-canvas.js");
+            document.write('<style>#mouse-canvas {z-index:217483647; pointer-events: none;  box-sizing: border-box !important; display: block !important; position: fixed !important; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100vh;}</style>')
+ 
+            // 鼠标移动的仙女棒特效
+             $.getScript("https://bensz.onmicrosoft.cn/bloghelper/mouse/halo-dream/fairyDustCursor.min.js");
+ 
+            // 鼠标移动的泡泡特效
+            // $.getScript("https://bensz.onmicrosoft.cn/bloghelper/mouse/joe/censor10.js");
+
+
+document.write('<link href="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/css/deng.css" rel="stylesheet">');
+document.write('<div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">春节</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div>');
+document.write('<div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">快乐</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div>');
+        }   
+    }
+</script>
+<!--春节灯笼-->
+<link href="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/css/deng.css" rel="stylesheet">
+<div class="deng-box">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">春节</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>
+ 
+<div class="deng-box1">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">快乐</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>
+<!--全页特效结束-->
