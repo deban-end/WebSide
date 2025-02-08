@@ -1,0 +1,303 @@
+@font-face{
+    font-family:btfFont;
+    src:
+    url(https://cdn.jsdelivr.net/gh/deban-end/WebSide@latest/Fonts/YeZiGongChangTangYingHei-2.woff2) format('woff2')
+}
+body{
+    font-family:"btfFont" !important
+}
+ 
+/*设置加粗字体颜色*/
+strong {
+    /*白天*/
+    color: #A7727D;
+}
+html.darkmode strong {
+    /*夜晚*/
+    color: #FAAB78;
+}
+ 
+/*说说预览模式的代码字体颜色*/
+pre {
+    /*白天*/
+    color: #A7727D;
+}
+html.darkmode pre {
+    /*夜晚*/
+    color: #FAAB78;
+}
+ 
+/*横幅字体大小*/
+.banner-title {
+  font-size: 2.5em;
+}
+.banner-subtitle{
+  font-size: 20px;
+}
+ 
+/*文章标题字体大小*/
+.post-title {
+    font-size: 30px
+}
+ 
+/*正文字体大小（不包含代码）*/
+.post-content p{
+    font-size: 1.25rem;
+}
+li{
+    font-size: 1.2rem;
+}
+ 
+/*评论区字体大小*/
+p {
+    font-size: 1.2rem
+}
+ 
+/*评论发送区字体大小*/
+.form-control{
+    font-size: 1.2rem
+}
+ 
+/*评论勾选项目字体大小*/
+.custom-checkbox .custom-control-input~.custom-control-label{
+    font-size: 1.2rem
+}
+/*评论区代码的强调色*/
+code {
+  color: rgba(var(--themecolor-rgbstr));
+}
+ 
+/*说说字体大小和颜色设置*/
+.shuoshuo-title {
+    font-size: 25px;
+/*  color: rgba(var(--themecolor-rgbstr)); */
+}
+ 
+/*尾注字体大小*/
+.additional-content-after-post{
+    font-size: 1.2rem
+}
+ 
+/*========颜色设置===========*/
+ 
+/*文章或页面的正文颜色*/
+body{
+    color:#364863
+}
+ 
+/*引文属性设置*/
+blockquote {
+    /*添加弱主题色为背景色*/
+    background: rgba(var(--themecolor-rgbstr), 0.1) !important;
+    width: 100%
+}
+ 
+/*引文颜色 建议用主题色*/
+:root {
+    /*也可以用类似于--color-border-on-foreground-deeper: #009688;这样的命令*/
+    --color-border-on-foreground-deeper: rgba(var(--themecolor-rgbstr));
+}
+ 
+/*左侧菜单栏突出颜色修改*/
+.leftbar-menu-item > a:hover, .leftbar-menu-item.current > a{
+    background-color: #f9f9f980;
+}
+ 
+/*站点概览分隔线颜色修改*/
+.site-state-item{
+    border-left: 1px solid #aaa;
+}
+.site-friend-links-title {
+    border-top: 1px dotted #aaa;
+}
+#leftbar_tab_tools ul li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom:none;
+}
+html.darkmode #leftbar_tab_tools ul li {
+    border-bottom:none;
+}
+ 
+/*左侧栏搜索框的颜色*/
+button#leftbar_search_container {
+    background-color: transparent;
+}
+ 
+/*========透明设置===========*/
+ 
+/*白天卡片背景透明*/
+.card{
+    background-color:rgba(255, 255, 255, 0.85) !important;
+    /*backdrop-filter:blur(6px);*//*毛玻璃效果主要属性*/
+    -webkit-backdrop-filter:blur(6px);
+}
+ 
+/*小工具栏背景完全透明*/
+/*小工具栏是card的子元素，如果用同一个透明度会叠加变色，故改为完全透明*/
+.card .widget,.darkmode .card .widget,#post_content > div > div > div.argon-timeline-card.card.bg-gradient-secondary.archive-timeline-title{
+    background-color:#ffffff00 !important;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+}
+.emotion-keyboard,#fabtn_blog_settings_popup{
+    background-color:rgba(255, 255, 255, 0.95) !important;
+}
+ 
+/*分类卡片透明*/
+.bg-gradient-secondary{
+    background:rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+ 
+/*夜间透明*/
+html.darkmode.bg-white,html.darkmode .card,html.darkmode #footer{
+    background:rgba(66, 66, 66, 0.9) !important;
+}
+html.darkmode #fabtn_blog_settings_popup{
+    background:rgba(66, 66, 66, 0.95) !important;
+}
+ 
+/*标签背景
+.post-meta-detail-tag {
+    background:rgba(255, 255, 255, 0.5)!important;
+}*/
+ 
+ 
+/*========排版设置===========*/
+ 
+/*左侧栏层级置于上层*/
+#leftbar_part1 {
+    z-index: 1;
+}
+ 
+/*分类卡片文本居中*/
+#content > div.page-information-card-container > div > div{
+    text-align:center;
+}
+ 
+/*子菜单对齐及样式调整*/
+.dropdown-menu .dropdown-item>i{
+    width: 10px;
+}
+.dropdown-menu>a {
+    color:var(--themecolor);
+}
+.dropdown-menu{
+    min-width:max-content;
+}
+.dropdown-menu .dropdown-item {
+    padding: .5rem 1.5rem 0.5rem 1rem;
+}
+.leftbar-menu-subitem{
+    min-width:max-content;
+}
+.leftbar-menu-subitem .leftbar-menu-item>a{
+    padding: 0rem 1.5rem 0rem 1rem;
+}
+ 
+/*左侧栏边距修改*/
+.tab-content{
+    padding:10px 0px 0px 0px !important;
+}
+.site-author-links{
+    padding:0px 0px 0px 10px ;
+}
+/*目录位置偏移修改*/
+#leftbar_catalog{
+    margin-left: 0px;
+}
+/*目录条目边距修改*/
+#leftbar_catalog .index-link{
+    padding: 4px 4px 4px 4px;
+}
+/*左侧栏小工具栏字体缩小*/
+#leftbar_tab_tools{
+    font-size: 14px;
+}
+ 
+/*正文图片边距修改*/
+article figure {margin:0;}
+/*正文图片居中显示*/
+.fancybox-wrapper {
+    margin: auto;
+}
+/*正文表格样式修改*/
+article table > tbody > tr > td,
+article table > tbody > tr > th,
+article table > tfoot > tr > td,
+article table > tfoot > tr > th,
+article table > thead > tr > td,
+article table > thead > tr > th{
+    padding: 8px 10px;
+    border: 1px solid;
+}
+/*表格居中样式*/
+.wp-block-table.aligncenter{margin:10px auto;}
+ 
+/*回顶图标放大*/
+button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_settings_popup, button#fabtn_toggle_sides, button#fabtn_open_sidebar{
+    font-size: 1.2rem;
+}
+ 
+/*顶栏菜单*/
+/*这里也可以设置刚刚我们设置的btfFont字体。试试看！*/
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-family: 'btfFont';
+}
+.nav-link-inner--text {
+    /*顶栏菜单字体大小*/
+    font-size: 1.2rem;
+}
+.navbar-nav .nav-item {
+    margin-right:0;
+}
+.mr-lg-5, .mx-lg-5 {
+    margin-right:1rem !important;
+}
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.9rem;
+    padding-left: 1rem;
+}
+ 
+/*顶栏图标*/
+.navbar-brand {
+    font-family: 'Noto Serif SC',serif;
+    font-size: 1.25rem;
+    /*顶栏图标边界微调*/
+    margin-right: 0rem; /*左右偏移*/
+    padding-bottom: 0.3rem;
+}
+.navbar-brand img { 
+  /* 图片高度*/
+    height: 24px;
+}
+ 
+/*隐藏wp-SEO插件带来的线条阴影（不一定要装）*/
+*[style='position: relative; z-index: 99998;'] {
+    display: none;
+}
+ 
+/*头像调大*/
+#leftbar_overview_author_image{
+  width: 180px !important;
+  height: 180px !important;
+}
+
+/*黑白
+html {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,#grayscale");
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(1);
+}*/
